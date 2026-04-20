@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,9 +48,9 @@ body{font-family:'Jost',sans-serif;background:var(--navy);color:var(--white);min
 .price-desc{font-size:10px;color:rgba(255,255,255,.5);margin-top:8px;line-height:1.55;font-weight:300;}
 
 /* PAY BUTTONS */
-.pay-buttons{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px;}
-.pay-btn{display:block;text-align:center;text-decoration:none;padding:14px 8px;
-  font-family:'Jost',sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;
+.pay-buttons{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:32px;}
+.pay-btn{display:block;text-align:center;text-decoration:none;padding:22px 12px;
+  font-family:'Jost',sans-serif;font-size:12px;font-weight:600;letter-spacing:1.5px;
   text-transform:uppercase;transition:all .2s;border:none;cursor:pointer;}
 .pay-btn.individual{background:var(--gold);color:var(--navy);}
 .pay-btn.individual:hover,.pay-btn.individual:active{background:var(--gold-l);}
@@ -58,9 +59,9 @@ body{font-family:'Jost',sans-serif;background:var(--navy);color:var(--white);min
 .pay-btn small{display:block;font-size:8px;letter-spacing:.5px;opacity:.7;margin-top:3px;font-weight:400;text-transform:none;}
 
 /* DIVIDER */
-.or-divider{display:flex;align-items:center;gap:14px;margin:24px 0 20px;}
-.or-divider::before,.or-divider::after{content:'';flex:1;height:1px;background:rgba(197,155,58,.2);}
-.or-divider span{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.3);white-space:nowrap;}
+
+
+
 
 /* FORM */
 .form-card{background:rgba(255,255,255,.03);border:1px solid rgba(197,155,58,.15);padding:24px 20px;margin-bottom:20px;}
@@ -123,7 +124,7 @@ body{font-family:'Jost',sans-serif;background:var(--navy);color:var(--white);min
 <div class="hero">
   <div class="badge">Flagship Executive Programme · Level 1</div>
   <h1>Creating<br><em>Future Ready Organisations</em></h1>
-  <p class="hero-sub">Theory U · MIT Presencing Institute · Management Innovations<br>Facilitated by Manoj Onkar</p>
+  <p class="hero-sub">Theory U · MIT Presencing Institute · Management Innovations<br>Facilitated by Dr. Manoj Onkar</p>
   <div class="hero-pills">
     <span class="pill">2 Deep Days</span>
     <span class="pill">5 Coaching Sessions</span>
@@ -151,81 +152,19 @@ body{font-family:'Jost',sans-serif;background:var(--navy);color:var(--white);min
     </div>
   </div>
 
-  <div class="section-label">Pay Directly</div>
+  <div class="section-label">Register &amp; Pay</div>
   <div class="pay-buttons">
     <a class="pay-btn individual" href="https://rzp.io/rzp/CFRO1" target="_blank" rel="noopener">
-      Pay Now<small>Individual &middot; &#8377;47,000</small>
+      Individual Registration<small>&#8377;47,000 + GST</small>
     </a>
     <a class="pay-btn group" href="https://rzp.io/rzp/CFRO" target="_blank" rel="noopener">
-      Pay Now<small>Group &middot; &#8377;40,000/person</small>
+      Group Registration<small>&#8377;40,000 per person + GST</small>
     </a>
   </div>
 
-  <div class="or-divider"><span>or register your interest</span></div>
 
-  <div class="form-card" id="regForm">
-    <div class="form-title">Register Your Interest</div>
-    <p class="form-sub">Fill in your details and our team will be in touch to confirm your place.</p>
-    <div class="error-banner" id="errBanner">
-      Something went wrong. Please email us directly at<br>
-      <strong>manoj@managementinnovations.co.in</strong>
-    </div>
-    <form id="regFormEl" novalidate>
-      <div class="form-grid">
-        <div class="form-row">
-          <label>Full Name *</label>
-          <input type="text" name="fullname" id="f-name" placeholder="Your full name" autocomplete="name">
-        </div>
-        <div class="form-row">
-          <label>Designation *</label>
-          <input type="text" name="designation" id="f-desig" placeholder="CEO / Founder&#8230;" autocomplete="organization-title">
-        </div>
-      </div>
-      <div class="form-row">
-        <label>Organisation *</label>
-        <input type="text" name="organisation" id="f-org" placeholder="Company / Institution name" autocomplete="organization">
-      </div>
-      <div class="form-grid">
-        <div class="form-row">
-          <label>Mobile / WhatsApp *</label>
-          <input type="tel" name="mobile" id="f-mob" placeholder="+91 &#8230;" autocomplete="tel">
-        </div>
-        <div class="form-row">
-          <label>Email Address *</label>
-          <input type="email" name="email" id="f-email" placeholder="your@email.com" autocomplete="email">
-        </div>
-      </div>
-      <div class="form-grid">
-        <div class="form-row">
-          <label>No. of Participants</label>
-          <select name="participants" id="f-parts">
-            <option>1 &#8212; Individual</option>
-            <option>2</option>
-            <option>3 (Group rate)</option>
-            <option>4</option>
-            <option>5+</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label>Participation Type</label>
-          <select name="type" id="f-type">
-            <option>Individual &#8212; &#8377;47,000 + GST</option>
-            <option>Group &#8212; &#8377;40,000/person + GST</option>
-          </select>
-        </div>
-      </div>
-      <button type="submit" class="submit-btn" id="submitBtn">
-        <span id="btnText">Submit Registration</span>
-        <div class="spinner" id="spinner"></div>
-      </button>
-    </form>
-  </div>
+  <div class="for
 
-  <div class="success-msg" id="successMsg">
-    <div class="tick">&#10022;</div>
-    <h3>Registration Received</h3>
-    <p>Thank you. Your registration has been received. Please proceed to payment using the links above to confirm your place.</p>
-  </div>
 
 </div>
 
