@@ -101,16 +101,40 @@ body{font-family:'Jost',sans-serif;background:var(--navy);color:var(--white);min
 .error-banner{display:none;padding:14px 18px;background:rgba(181,73,26,.15);
   border:1px solid rgba(181,73,26,.4);margin-bottom:14px;font-size:12px;color:#e06050;line-height:1.6;}
 
-/* CONTACT */
-.contact-strip{background:var(--gold);padding:20px;text-align:center;}
-.contact-strip p{font-size:12px;color:var(--navy);font-weight:500;line-height:2;}
-.contact-strip a{color:var(--navy);font-weight:700;}
-.contact-strip .schedule{display:inline-block;margin-top:10px;border:1px solid rgba(13,21,34,.3);
-  padding:8px 20px;font-size:10px;letter-spacing:2px;text-transform:uppercase;
-  color:var(--navy);text-decoration:none;font-weight:700;}
+/* BOTTOM SECTION */
+.bottom-section{background:var(--navy2);border-top:1px solid rgba(197,155,58,.2);}
 
-/* FOOTER */
-.footer{text-align:center;padding:20px 16px;font-size:10px;color:rgba(255,255,255,.22);letter-spacing:.8px;line-height:2;}
+/* HELP ROW */
+.help-row{padding:32px 20px 28px;max-width:560px;margin:0 auto;}
+.help-label{font-size:8px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);
+  margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+.help-label::before{content:'';display:block;width:20px;height:1px;background:var(--gold);}
+.help-contacts{display:flex;flex-direction:column;gap:14px;}
+.help-item{display:flex;align-items:center;gap:16px;text-decoration:none;
+  padding:14px 18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+  transition:all .2s;}
+.help-item:hover,.help-item:active{background:rgba(197,155,58,.08);border-color:rgba(197,155,58,.3);}
+.help-icon{font-size:18px;flex-shrink:0;width:28px;text-align:center;}
+.help-text{display:flex;flex-direction:column;gap:2px;}
+.help-type{font-size:8px;letter-spacing:2.5px;text-transform:uppercase;
+  color:rgba(255,255,255,.35);font-weight:600;}
+.help-val{font-size:13px;color:rgba(255,255,255,.8);font-weight:300;}
+.schedule-item .help-val{color:var(--gold);}
+
+/* SITE FOOTER */
+.site-footer{background:var(--navy);border-top:1px solid rgba(197,155,58,.15);
+  padding:24px 20px;text-align:center;}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;
+  color:var(--white);letter-spacing:1px;margin-bottom:2px;}
+.footer-tag{font-size:9px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:14px;}
+.footer-links{display:flex;justify-content:center;align-items:center;gap:10px;
+  flex-wrap:wrap;margin-bottom:10px;}
+.footer-links a{font-size:11px;color:rgba(255,255,255,.45);text-decoration:none;
+  transition:color .2s;}
+.footer-links a:hover{color:var(--gold);}
+.footer-dot{color:rgba(255,255,255,.2);font-size:10px;}
+.footer-copy{font-size:10px;color:rgba(255,255,255,.2);letter-spacing:.5px;}
 
 /* MOBILE */
 @media(max-width:460px){
@@ -168,83 +192,55 @@ body{font-family:'Jost',sans-serif;background:var(--navy);color:var(--white);min
 
 </div>
 
-<div class="contact-strip">
-  <p>
-    Questions? Reach out directly.<br>
-    <a href="mailto:manoj@managementinnovations.co.in">manoj@managementinnovations.co.in</a>
-    &nbsp;&middot;&nbsp;
-    <a href="https://wa.me/919106456725">+91 9106456725</a> (WhatsApp &middot; Messages only)
-  </p>
-  <a class="schedule" href="https://calendar.app.google/5Hp8KqfyBo98Ly3v9" target="_blank" rel="noopener">Schedule a Call</a>
-</div>
+<div class="bottom-section">
 
-<div class="footer">
-  Management Innovations &middot; Vision to Implementation<br>
-  www.managementinnovations.co.in &nbsp;&middot;&nbsp; www.theoryuindia.com
+  <!-- NEED HELP ROW -->
+  <div class="help-row">
+    <div class="help-label">Need help deciding?</div>
+    <div class="help-contacts">
+      <a class="help-item" href="mailto:manoj@managementinnovations.co.in">
+        <span class="help-icon">&#9993;</span>
+        <span class="help-text">
+          <span class="help-type">Email</span>
+          <span class="help-val">manoj@managementinnovations.co.in</span>
+        </span>
+      </a>
+      <a class="help-item" href="https://wa.me/919106456725">
+        <span class="help-icon">&#128241;</span>
+        <span class="help-text">
+          <span class="help-type">WhatsApp</span>
+          <span class="help-val">+91 9106456725 &middot; Messages only</span>
+        </span>
+      </a>
+      <a class="help-item schedule-item" href="https://calendar.app.google/5Hp8KqfyBo98Ly3v9" target="_blank" rel="noopener">
+        <span class="help-icon">&#128197;</span>
+        <span class="help-text">
+          <span class="help-type">Schedule</span>
+          <span class="help-val">Book a 15-min call</span>
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="site-footer">
+    <div class="footer-logo">Management Innovations</div>
+    <div class="footer-tag">Vision to Implementation</div>
+    <div class="footer-links">
+      <a href="https://www.managementinnovations.co.in" target="_blank" rel="noopener">managementinnovations.co.in</a>
+      <span class="footer-dot">&middot;</span>
+      <a href="https://www.theoryuindia.com" target="_blank" rel="noopener">theoryuindia.com</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Management Innovations. All rights reserved.</div>
+  </div>
+
 </div>
 
 <script>
 function selectType(type) {
   document.getElementById('card-individual').classList.toggle('selected', type==='individual');
   document.getElementById('card-group').classList.toggle('selected', type==='group');
-  document.getElementById('f-type').selectedIndex = type==='individual' ? 0 : 1;
-  if (type==='group') {
-    var p = document.getElementById('f-parts');
-    if (p.selectedIndex===0) p.selectedIndex=2;
-  }
 }
-
-document.getElementById('regFormEl').addEventListener('submit', async function(e) {
-  e.preventDefault();
-
-  var name  = document.getElementById('f-name');
-  var org   = document.getElementById('f-org');
-  var mob   = document.getElementById('f-mob');
-  var email = document.getElementById('f-email');
-  var valid = true;
-
-  [name, org, mob, email].forEach(function(el){
-    el.classList.remove('error');
-    if (!el.value.trim()) { el.classList.add('error'); valid=false; }
-  });
-  if (email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-    email.classList.add('error'); valid=false;
-  }
-  if (!valid) { name.focus(); return; }
-
-  var btn     = document.getElementById('submitBtn');
-  var btnText = document.getElementById('btnText');
-  var spinner = document.getElementById('spinner');
-  btn.disabled=true; btnText.style.display='none'; spinner.style.display='block';
-
-  // Build payload for Formspree
-  var payload = {
-    'Full Name':       name.value.trim(),
-    'Designation':     document.getElementById('f-desig').value.trim(),
-    'Organisation':    org.value.trim(),
-    'Mobile':          mob.value.trim(),
-    'Email':           email.value.trim(),
-    'Participants':    document.getElementById('f-parts').value,
-    'Type':            document.getElementById('f-type').value,
-    '_subject':        'Registration Request — Creating Future Ready Organisations',
-    '_replyto':        email.value.trim()
-  };
-
-  try {
-    var res = await fetch('https://formspree.io/f/mrerlnvw', {
-      method:'POST', body:JSON.stringify(payload),
-      headers:{'Accept':'application/json','Content-Type':'application/json'}
-    });
-    if (res.ok) {
-      document.getElementById('regForm').style.display='none';
-      document.getElementById('successMsg').style.display='block';
-      window.scrollTo({top: document.getElementById('successMsg').offsetTop - 40, behavior:'smooth'});
-    } else { throw new Error(); }
-  } catch(err) {
-    document.getElementById('errBanner').style.display='block';
-    btn.disabled=false; btnText.style.display='block'; spinner.style.display='none';
-  }
-});
 </script>
 </body>
 </html>
